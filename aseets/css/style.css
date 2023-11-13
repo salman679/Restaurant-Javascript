@@ -1,0 +1,281 @@
+/* 
+Website name: 
+Author: Salman Izhar
+Version: 1.0
+Gmail: Sbinazhar671@gmail.com
+*/
+
+/* 
+Table of content:
+
+1. common css
+2. 
+*/
+
+/* common css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Open+Sans:wght@500;700&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+:root{
+    --primary-color: #F0A500;
+    --bg-color: #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+:focus-visible{
+    outline: none
+}
+
+/* nevber start */
+
+    .header{
+        padding: 30px 0;
+    }
+
+    .header .header-content{
+        display: flex;
+        align-items: center;
+    }
+
+    .header .header-content .logo img{
+        max-width: 260px;
+        height: 60px;
+    }
+
+    .header .header-content .list a{
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-left: 26px;
+        color: var(--bg-color);
+    }
+
+    .header .header-content .cart{
+        margin-left: 25px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .header .header-content .cart i{
+        color: var(--primary-color);
+    }
+
+    .header .header-content .cart span{
+        position: absolute;
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        top: -17px;
+        right: -10px;
+        
+        /* transform: translateY(-50%); */
+    }
+
+/* banner start */
+    .banner{
+        background-image: url(../image/banner.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 150px 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .banner::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.35);
+        z-index: -1;
+    }
+
+    .banner .banner-content h1  {
+        font-family: Open Sans;
+        font-size: 56px;
+        font-weight: 800;
+        line-height: 76px;
+        color: #fff;
+        text-align: center;
+    }
+
+/* food section */
+    .food{
+        padding: 50px 0;
+    }
+
+    .food .content-heading{
+        font-family: Inter;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 34px;
+        color: rgba(0, 0, 0, 1);
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .food .food-items{
+        margin: 15px 0;
+        background-color: #fff;
+    }
+
+    .food .food-items img{
+        width: 100%;
+    }
+
+    .food .food-items .food-information{
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .food .food-items .food-information .name{
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        color: var(--bg-color);
+    }
+
+    .food .food-items .food-information .price{
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        color: var(--primary-color);
+        text-align: right;
+    }
+
+    .food .food-items .food-information .rating i{
+        color: #D9D9D9;
+    }
+
+    .food .food-items .food-information .rating i.active{
+        color: var(--primary-color);
+    }
+
+    .food .food-items .btn{
+        /* padding: 0 10px 15px; */
+    }
+
+    .food .food-items .food-btn a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color);
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+        height: 35px;
+        padding: 5px 76;
+    }
+
+    .food .food-items .food-btn a.adedd{
+        background-color: #000; 
+    }
+
+
+/* footar start */
+
+    footer{
+        background-color: #fff;
+    }
+
+/* addToCart start */
+
+    .cartModel .modal-header{
+        border-bottom: 0;
+    }
+
+    .cartModel .modal-body h3{
+        font-family: Open Sans;
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    .cartModel img{
+        width: 100px;
+    }
+
+    .cartModel tbody{
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        vertical-align: middle;
+    }
+
+    .cartModel .amount-area{
+        display: flex;
+        align-items: center;
+    }
+
+    .cartModel .amount-area span{
+        margin-left: 5px;
+        display: inline-block;
+    } 
+
+    .cartModel .amount-area .plus,
+    .cartModel .amount-area .minus{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        width: 22px;
+        height: 22px;
+        border: 1px solid var(--primary-color);
+        border-radius: 50%;
+        font-size: 12px;
+        color: var(--primary-color);
+        cursor: pointer;
+        transition: all linear .3s;
+        line-height: 14px;
+        margin-left: 2px;
+    }
+
+    .cartModel .amount-area .plus:hover,
+    .cartModel .amount-area .minus:hover{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+
+    .cartModel .modal-footer{
+        border-top: 0;
+    }
+
+    .cartModel .action i{
+        color: var(--primary-color);
+    }
+
+    .cartModel .action i:hover{
+        color: #000000be;
+    }
+
+
+/* 
+    .cartModel .amount-plus,
+    .cartModel .amount-minus{
+        width: 10.94px;
+        height: 10.94px;
+        color: var(--primary-color);
+
+    } */

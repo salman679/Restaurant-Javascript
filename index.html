@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESTAURANT</title>
+  <link rel="shortcut icon" href="aseets/image/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="aseets/css/all.min.css">
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="aseets/css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="aseets/css/style.css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="#">
+            <img src="aseets/image/logo.png" alt="logo">
+          </a>
+        </div>
+        <nav class="list ms-auto">
+          <ul class="d-flex m-0 p-0">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <div class="icon" data-bs-toggle="modal" data-bs-target="#cartModel">
+            <i class="fa-solid fa-2xl fa-cart-arrow-down"></i>
+            <span id="card-status">3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- banner start -->
+  <section class="banner">
+    <div class="container">
+      <div class="banner-content">
+        <h1>WELCOME TO MY RESTAURANT</h1>
+      </div>
+    </div>
+  </section>
+  <!-- banner end -->
+
+  <!-- food section start -->
+  <div class="food">
+    <div class="content-heading">
+      <p>Chose Your Favorite Food</p>
+    </div>
+    <div class="container">
+      <div id="food-section" class="row">
+        <!-- keep this section empty -->
+      </div>
+    </div>
+  </div>
+  <!-- food section end -->
+
+  <!-- footer start -->
+  <footer class="footer text-center m-0 py-3">
+    <span class=""> &copy; Salman Izhar | All Right Reserved</span>
+  </footer>
+  <!-- footer end -->
+
+  <!-- popup section -->
+
+  <!-- Modal -->
+  <div class="modal cartModel fade" id="cartModel" tabindex="-1" aria-labelledby="cartModel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-0 border-0">
+          <h3 class="pb-5 text-center">Your Cart Items</h3>
+          <table class="table table-hover table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody">
+              <tr>
+                <th colspan="6">
+                  <p class="text-center mb-0 p-2">NO Data Found</p>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <h3 class="w-100 text-end pb-3">Total Amount: $<span id="fainal_total">0</span></h3>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Checkout</button>
+          <button id="clearcart" type="button" class="btn btn-primary">Clear</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- bootstrap js -->
+    <script src="aseets/js/bootstrap.bundle.min.js"></script>
+    <!-- main bootstrap -->
+    <script src="aseets/js/custom.js"></script>
+</body>
+
+</html>
