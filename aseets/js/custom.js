@@ -176,7 +176,7 @@ function btnstatuschange(salman) {
     salman.forEach(function (items) {
         let atags = document.querySelector(`[data-id = "${items.id}"]`)
         atags.classList.add('adedd');
-        atags.textContent = 'allradey adedd';
+        atags.textContent = 'Allradey adedd';
     })
 }
 
